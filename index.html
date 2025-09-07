@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interest Survey — Project Category Suggestion</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Chart.js CDN (requires internet to load) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Interest Survey</h1>
+    <p>Rate each statement from 0 (Not at all) to 5 (Very much)</p>
+    <form id="surveyForm">
+      <div id="questions"></div>
+      <div class="actions">
+        <button type="button" id="submitBtn">Get Suggested Category</button>
+        <button type="button" id="resetBtn">Reset</button>
+      </div>
+    </form>
+
+    <section id="results" class="hidden">
+      <h2>Results</h2>
+      <p id="suggestion"></p>
+      <canvas id="resultsChart" width="600" height="300"></canvas>
+      <details>
+        <summary>Raw category scores</summary>
+        <pre id="rawScores"></pre>
+      </details>
+    </section>
+
+    <footer>
+      <small>Made for classroom/project use. Exports responses as JSON for download.</small>
+      <div class="download-links">
+        <button id="downloadJson">Download responses (.json)</button>
+        <button id="downloadCsv">Download responses (.csv)</button>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
